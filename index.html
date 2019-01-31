@@ -1673,7 +1673,7 @@ Andelen äldre i befolkningen förväntas öka med 30 procent mellan 2010 och 20
 							<div id="youtube_single_player_container_19">
 								<div id="youtube_single_player_19"></div>
 								<div class="thumbnail_block">
-									<img class="thumb" src="./files/Davidwest2.jpg" alt="Möt David West på CurioCity Mashup">
+									<img class="thumb" src="./files/davidwest2.jpg" alt="Möt David West på CurioCity Mashup">
 									<img class="play" src="./files/play.youtube.png" alt="YouTube play">
 								</div>
 							</div>
@@ -2302,12 +2302,7 @@ Allt innehåll (om inget annat anges) som har sitt ursprung på den&nbsp;här we
 					}
 				#>
 				<div style="{{ w_rule }}" class="wp-media-wrapper wp-video">
-					<video controls="controls" class="wp-video-shortcode" preload="metadata"
-						<# if ( data.width ) { #>width="{{ data.width }}"<# } #>
-						<# if ( data.height ) { #>height="{{ data.height }}"<# } #>
-						<# if ( data.image && data.image.src !== data.icon ) { #>poster="{{ data.image.src }}"<# } #>>
-						<source type="{{ data.mime }}" src="{{ data.url }}"/>
-					</video>
+					
 				</div>
 				<# } #>
 
@@ -2994,149 +2989,7 @@ Allt innehåll (om inget annat anges) som har sitt ursprung på den&nbsp;här we
 		<div id="image-editor-{{ data.id }}"></div>
 	</script>
 
-	<script type="text/html" id="tmpl-audio-details">
-		<# var ext, html5types = {
-			mp3: wp.media.view.settings.embedMimes.mp3,
-			ogg: wp.media.view.settings.embedMimes.ogg
-		}; #>
-
-				<div class="media-embed media-embed-details">
-			<div class="embed-media-settings embed-audio-settings">
-				<audio style="visibility: hidden"
-	controls
-	class="wp-audio-shortcode"
-	width="{{ _.isUndefined( data.model.width ) ? 400 : data.model.width }}"
-	preload="{{ _.isUndefined( data.model.preload ) ? 'none' : data.model.preload }}"
-	<#
-	if ( ! _.isUndefined( data.model.autoplay ) && data.model.autoplay ) {
-		#> autoplay<#
-	}
-	if ( ! _.isUndefined( data.model.loop ) && data.model.loop ) {
-		#> loop<#
-	}
-	#>
->
-	<# if ( ! _.isEmpty( data.model.src ) ) { #>
-	<source src="{{ data.model.src }}" type="{{ wp.media.view.settings.embedMimes[ data.model.src.split('.').pop() ] }}" />
-	<# } #>
-
-	<# if ( ! _.isEmpty( data.model.mp3 ) ) { #>
-	<source src="{{ data.model.mp3 }}" type="{{ wp.media.view.settings.embedMimes[ 'mp3' ] }}" />
-	<# } #>
-	<# if ( ! _.isEmpty( data.model.ogg ) ) { #>
-	<source src="{{ data.model.ogg }}" type="{{ wp.media.view.settings.embedMimes[ 'ogg' ] }}" />
-	<# } #>
-	<# if ( ! _.isEmpty( data.model.wma ) ) { #>
-	<source src="{{ data.model.wma }}" type="{{ wp.media.view.settings.embedMimes[ 'wma' ] }}" />
-	<# } #>
-	<# if ( ! _.isEmpty( data.model.m4a ) ) { #>
-	<source src="{{ data.model.m4a }}" type="{{ wp.media.view.settings.embedMimes[ 'm4a' ] }}" />
-	<# } #>
-	<# if ( ! _.isEmpty( data.model.wav ) ) { #>
-	<source src="{{ data.model.wav }}" type="{{ wp.media.view.settings.embedMimes[ 'wav' ] }}" />
-	<# } #>
-	</audio>
-
-				<# if ( ! _.isEmpty( data.model.src ) ) {
-					ext = data.model.src.split('.').pop();
-					if ( html5types[ ext ] ) {
-						delete html5types[ ext ];
-					}
-				#>
-				<label class="setting">
-					<span>SRC</span>
-					<input type="text" disabled="disabled" data-setting="src" value="{{ data.model.src }}" />
-					<button type="button" class="button-link remove-setting">Ta bort ljudkälla</button>
-				</label>
-				<# } #>
-				<# if ( ! _.isEmpty( data.model.mp3 ) ) {
-					if ( ! _.isUndefined( html5types.mp3 ) ) {
-						delete html5types.mp3;
-					}
-				#>
-				<label class="setting">
-					<span>MP3</span>
-					<input type="text" disabled="disabled" data-setting="mp3" value="{{ data.model.mp3 }}" />
-					<button type="button" class="button-link remove-setting">Ta bort ljudkälla</button>
-				</label>
-				<# } #>
-				<# if ( ! _.isEmpty( data.model.ogg ) ) {
-					if ( ! _.isUndefined( html5types.ogg ) ) {
-						delete html5types.ogg;
-					}
-				#>
-				<label class="setting">
-					<span>OGG</span>
-					<input type="text" disabled="disabled" data-setting="ogg" value="{{ data.model.ogg }}" />
-					<button type="button" class="button-link remove-setting">Ta bort ljudkälla</button>
-				</label>
-				<# } #>
-				<# if ( ! _.isEmpty( data.model.wma ) ) {
-					if ( ! _.isUndefined( html5types.wma ) ) {
-						delete html5types.wma;
-					}
-				#>
-				<label class="setting">
-					<span>WMA</span>
-					<input type="text" disabled="disabled" data-setting="wma" value="{{ data.model.wma }}" />
-					<button type="button" class="button-link remove-setting">Ta bort ljudkälla</button>
-				</label>
-				<# } #>
-				<# if ( ! _.isEmpty( data.model.m4a ) ) {
-					if ( ! _.isUndefined( html5types.m4a ) ) {
-						delete html5types.m4a;
-					}
-				#>
-				<label class="setting">
-					<span>M4A</span>
-					<input type="text" disabled="disabled" data-setting="m4a" value="{{ data.model.m4a }}" />
-					<button type="button" class="button-link remove-setting">Ta bort ljudkälla</button>
-				</label>
-				<# } #>
-				<# if ( ! _.isEmpty( data.model.wav ) ) {
-					if ( ! _.isUndefined( html5types.wav ) ) {
-						delete html5types.wav;
-					}
-				#>
-				<label class="setting">
-					<span>WAV</span>
-					<input type="text" disabled="disabled" data-setting="wav" value="{{ data.model.wav }}" />
-					<button type="button" class="button-link remove-setting">Ta bort ljudkälla</button>
-				</label>
-				<# } #>
-				
-				<# if ( ! _.isEmpty( html5types ) ) { #>
-				<div class="setting">
-					<span>Lägg till alternativ källa för maximal HTML5-uppspelning:</span>
-					<div class="button-large">
-					<# _.each( html5types, function (mime, type) { #>
-					<button class="button add-media-source" data-mime="{{ mime }}">{{ type }}</button>
-					<# } ) #>
-					</div>
-				</div>
-				<# } #>
-
-				<div class="setting preload">
-					<span>Förhandsladda</span>
-					<div class="button-group button-large" data-setting="preload">
-						<button class="button" value="auto">Auto</button>
-						<button class="button" value="metadata">Metadata</button>
-						<button class="button active" value="none">Inget</button>
-					</div>
-				</div>
-
-				<label class="setting checkbox-setting">
-					<input type="checkbox" data-setting="autoplay" />
-					<span>Spela upp automatiskt</span>
-				</label>
-
-				<label class="setting checkbox-setting">
-					<input type="checkbox" data-setting="loop" />
-					<span>Loop</span>
-				</label>
-			</div>
-		</div>
-	</script>
+	
 
 	<script type="text/html" id="tmpl-video-details">
 		<# var ext, html5types = {
@@ -3481,8 +3334,7 @@ jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeTex
 <script type="text/javascript" src="./files/utils.min.js"></script>
 <script type="text/javascript" src="./files/backbone.min.js"></script>
 
-<script type="text/javascript" src="./files/wp-util.min.js"></script>
-<script type="text/javascript" src="./files/wp-backbone.min.js"></script>
+
 
 <script type="text/javascript" src="./files/media-models.min.js"></script>
 <script type="text/javascript" src="./files/plupload.full.min.js"></script>
