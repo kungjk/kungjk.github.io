@@ -1,0 +1,63 @@
+/*
+ * imgAreaSelect animated border style
+ */
+
+.imgareaselect-border1 {
+	background: url(/web/20170606200941im_/http://www.curiocity.se/wp-includes/js/imgareaselect/border-anim-v.gif) repeat-y left top;
+}
+
+.imgareaselect-border2 {
+    background: url(/web/20170606200941im_/http://www.curiocity.se/wp-includes/js/imgareaselect/border-anim-h.gif) repeat-x left top;
+}
+
+.imgareaselect-border3 {
+    background: url(/web/20170606200941im_/http://www.curiocity.se/wp-includes/js/imgareaselect/border-anim-v.gif) repeat-y right top;
+}
+
+.imgareaselect-border4 {
+    background: url(/web/20170606200941im_/http://www.curiocity.se/wp-includes/js/imgareaselect/border-anim-h.gif) repeat-x left bottom;
+}
+
+.imgareaselect-border1, .imgareaselect-border2,
+.imgareaselect-border3, .imgareaselect-border4 {
+    filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+.imgareaselect-handle {
+    background-color: #fff;
+	border: solid 1px #000;
+    filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+.imgareaselect-outer {
+	background-color: #000;
+    filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+.imgareaselect-selection {
+}
+
+/*
+     FILE ARCHIVED ON 20:09:41 Jun 06, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 11:47:59 Jan 25, 2019.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 28.424 (3)
+  esindex: 0.007
+  captures_list: 43.462
+  CDXLines.iter: 11.089 (3)
+  PetaboxLoader3.datanode: 41.369 (4)
+  exclusion.robots: 0.134
+  exclusion.robots.policy: 0.125
+  RedisCDXSource: 1.49
+  PetaboxLoader3.resolve: 12.814
+  load_resource: 47.575
+*/
