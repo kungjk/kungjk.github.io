@@ -153,13 +153,14 @@ img.emoji {
 <p>65 % av alla barn som börjar skolan idag kan se fram emot en karriär inom ett yrke som ännu inte finns. Hur kan vi tänka nytt kring framtidens kompetensförsörjning när kompetenskartan och arbetsmarknaden ritas om radikalt?
 
 Och hur kan välfärden upprätthållas, förändras eller utvecklas om förutsättningen är ökade behov i kombination med begränsade resurser? Vem är framtidens medarbetare? Helsingborgs stad bjuder tillsammans med den danska utvecklingsbyrån BETA in till ett samtal där vi utforskar möjligheter och utmaningar för framtidens kompetensförsörjning.
+Hur bra är barnspelet Labyrint? Svaret hittar du här: <a href="https://www.kenntoft.se/gamenights/labyrint.php" target="_blank">Recension Labyrint</a>.
 
 Talare är:</p>
 <ul>
-<li>Jörgen Fransson / HR-direktör – Helsingborgs stad</li>
-<li>Anna Rydberg / traineekoordinator – Familjen Helsingborg</li>
-<li>Morten Hyllegaard / partner – BETA</li>
-<li>Martina Elofsson / HR-chef – socialförvaltningen Helsingborgs stad</li>
+<li>Jerker Fransson / HR-direktör – Helsingborgs stad</li>
+<li>Hanna Rydh / traineekoordinator – Familjen Helsingborg</li>
+<li>Martin Hylled / partner – BETA</li>
+<li>Martina Eriksson / HR-chef – socialförvaltningen Helsingborgs stad</li>
 </ul>
 </div></div>
 
@@ -1370,58 +1371,9 @@ Talare är:</p>
 		</div>
 	</script>
 
-	<script type="text/html" id="tmpl-editor-gallery">
-		<# if ( data.attachments.length ) { #>
-			<div class="gallery gallery-columns-{{ data.columns }}">
-				<# _.each( data.attachments, function( attachment, index ) { #>
-					<dl class="gallery-item">
-						<dt class="gallery-icon">
-							<# if ( attachment.thumbnail ) { #>
-								<img src="{{ attachment.thumbnail.url }}" width="{{ attachment.thumbnail.width }}" height="{{ attachment.thumbnail.height }}" alt="" />
-							<# } else { #>
-								<img src="{{ attachment.url }}" alt="" />
-							<# } #>
-						</dt>
-						<# if ( attachment.caption ) { #>
-							<dd class="wp-caption-text gallery-caption">
-								{{{ data.verifyHTML( attachment.caption ) }}}
-							</dd>
-						<# } #>
-					</dl>
-					<# if ( index % data.columns === data.columns - 1 ) { #>
-						<br style="clear: both;">
-					<# } #>
-				<# } ); #>
-			</div>
-		<# } else { #>
-			<div class="wpview-error">
-				<div class="dashicons dashicons-format-gallery"></div><p>Inga objekt funna.</p>
-			</div>
-		<# } #>
-	</script>
+	
 
-	<script type="text/html" id="tmpl-crop-content">
-		<img class="crop-image" src="{{ data.url }}" alt="Förhandsgranskningsområde för bildbeskärning Kräver interaktion med mus.">
-		<div class="upload-errors"></div>
-	</script>
-
-	<script type="text/html" id="tmpl-site-icon-preview">
-		<h2>Förhandsgranska</h2>
-		<strong aria-hidden="true">Som en webbläsarikon</strong>
-		<div class="favicon-preview">
-			<img src="./files/loading.gif" class="browser-preview" width="182" height="" alt="" />
-
-			<div class="favicon">
-				<img id="preview-favicon" src="{{ data.url }}" alt="Förhandsgranska som en webbläsarikon"/>
-			</div>
-			<span class="browser-title" aria-hidden="true">Curiocity Mashup</span>
-		</div>
-
-		<strong aria-hidden="true">Som en app-ikon</strong>
-		<div class="app-icon-preview">
-			<img id="preview-app-icon" src="{{ data.url }}" alt="Förhandsgranska som en app-ikon"/>
-		</div>
-	</script>
+	
 
 <link rel="stylesheet" id="buttons-css" href="./files/buttons.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="dashicons-css" href="./files/dashicons.min.css" type="text/css" media="all">
